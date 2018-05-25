@@ -1,0 +1,7 @@
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\bin\Debug\Project Week Two.exe.config
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\bin\Debug\Project Week Two.exe
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\bin\Debug\Project Week Two.pdb
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\obj\Debug\Project Week Two.csprojAssemblyReference.cache
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\obj\Debug\Project Week Two.csproj.CoreCompileInputs.cache
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\obj\Debug\Project Week Two.exe
+C:\Users\WeCanCodeIT\source\repos\Project Week Two\Project Week Two\obj\Debug\Project Week Two.pdb
