@@ -30,15 +30,22 @@ namespace Project_Week_Two
                 Random range = new Random();
                 range.Next(minRange, maxRange);
 
+             //Test   Console.WriteLine(minRange);
+             //Test   Console.WriteLine(maxRange);
+
             Console.WriteLine("Please Pick Your 6 Winning Numbers");
-            Console.WriteLine("Pick your first number");
-            int[] numPick = new int[6];
-            int numOne = int.Parse(Console.ReadLine(numPick[0]));
-            int numTwo = numPick[1];
-            int numthree = numPick[2];
-            int numfour = numPick[3];
+            int[] userLuckyNum = new int[6];
+                for (int i = 0; i < userLuckyNum.Length; i++)
+                {
+                    Console.WriteLine("Enter a Number");
+                    userLuckyNum[i] = int.Parse(Console.ReadLine());
+
+                    
+                }
+           
             
-                 
+                 Console.WriteLine(userLuckyNum[6]);
+
             }
 
             Console.WriteLine("Thanks for playing");
