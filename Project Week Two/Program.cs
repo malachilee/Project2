@@ -12,6 +12,7 @@ namespace Project_Week_Two
         {
             double jackpot = 500000;
             Console.WriteLine("!!lucky Numbers Lottery Game!!");
+            Console.WriteLine( "Max Jackpot is $500,000");
             Console.WriteLine();
 
             string exitRes = "yes";
@@ -66,7 +67,14 @@ namespace Project_Week_Two
                         {  matchNum++; }
                     }
                 }
+
+                jackpot = jackpot / matchNum;
+                Console.WriteLine();
                 Console.WriteLine("You matched " + matchNum + " Lucky Numbers Correctly");
+                Console.WriteLine();
+                if (matchNum.Equals(0)) { Console.WriteLine("Sorry, better Luck next time"); }
+                else { Console.WriteLine("You Won $" + jackpot + "!"); }
+               
             }
 
             Console.WriteLine("Thanks for playing!");
