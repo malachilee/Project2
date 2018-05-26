@@ -10,7 +10,7 @@ namespace Project_Week_Two
     {
         static void Main(string[] args)
         {
-            
+            double jackpot = 500000;
             Console.WriteLine("!!lucky Numbers Lottery Game!!");
             Console.WriteLine();
 
@@ -27,28 +27,49 @@ namespace Project_Week_Two
             Console.WriteLine("What is your maximum range number?");
             int maxRange = int.Parse(Console.ReadLine());
 
-                Random range = new Random();
-                range.Next(minRange, maxRange);
-
-             //Test   Console.WriteLine(minRange);
-             //Test   Console.WriteLine(maxRange);
-
             Console.WriteLine("Please Pick Your 6 Winning Numbers");
+            Console.WriteLine();
+
+            int userPick = 0;
             int[] userLuckyNum = new int[6];
+
                 for (int i = 0; i < userLuckyNum.Length; i++)
                 {
                     Console.WriteLine("Enter a Number");
-                    userLuckyNum[i] = int.Parse(Console.ReadLine());
+                    userPick = int.Parse(Console.ReadLine());
+                    userLuckyNum[i] = userPick;
+                    if((userPick < minRange) || (userPick > maxRange))
+                    {
+                        Console.WriteLine("Pick a Number Within Your Range");
 
-                    
+                    }
+
+             //Test   Console.WriteLine(userPick);
                 }
-           
-            
-                 Console.WriteLine(userLuckyNum[6]);
 
+                int winNum = 0;
+                Random ranNums = new Random();
+                int[] lottery = new int[6];
+
+                for (int i = 0; i < lottery.Length; i++)
+                {
+                    winNum = ranNums.Next(minRange, maxRange++);
+                    lottery[i] = winNum;
+                Console.WriteLine("Lucky Number: " + winNum);
+
+                }
+
+               int matchNum = 0;
+               for(int i = 0; i < userLuckyNum.Length; i++)
+                {for(int j = 0; j < lottery.Length; j++)
+                    {if (userLuckyNum[i] == lottery[j])
+                        {  matchNum++; }
+                    }
+                }
+                Console.WriteLine("You matched " + matchNum + " Lucky Numbers Correctly");
             }
 
-            Console.WriteLine("Thanks for playing");
+            Console.WriteLine("Thanks for playing!");
            
 
             
