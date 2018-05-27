@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+          //Malachi Lee
 namespace Project_Week_Two
-{
+{         
     class Program
     {
         static void Main(string[] args)
@@ -27,7 +27,7 @@ namespace Project_Week_Two
             Console.WriteLine();
             Console.WriteLine("What is your maximum range number?");
             int maxRange = int.Parse(Console.ReadLine());
-                Console.WriteLine();
+            Console.WriteLine();
 
             Console.WriteLine("Please Pick Your 6 Winning Numbers");
             Console.WriteLine();
@@ -40,15 +40,13 @@ namespace Project_Week_Two
                     Console.WriteLine("Enter a Number");
                     userPick = int.Parse(Console.ReadLine());
                     userLuckyNum[i] = userPick;
-                    if((userPick < minRange) || (userPick > maxRange))
+                    while((userPick < minRange) || (userPick > maxRange))
                     {
-                        Console.WriteLine("Pick a Number Within Your Range");
-
+                        Console.WriteLine("Re-enter a Number Within Your Picked Range of " + minRange + "-" + maxRange + ".");
+                        userPick = int.Parse(Console.ReadLine());
                     }
-
-             //Test   Console.WriteLine(userPick);
+                 //Test   Console.WriteLine(userPick);
                 }
-
                 int winNum = 0;
                 Random ranNums = new Random();
                 int[] lottery = new int[6];
@@ -69,18 +67,17 @@ namespace Project_Week_Two
                     }
                 }
 
-              
                 Console.WriteLine();
                 Console.WriteLine("You matched " + matchNum + " Lucky Numbers");
                 Console.WriteLine();
 
-                if(matchNum.Equals(0)) { Console.WriteLine("Sorry, better Luck next time"); }
-                if(matchNum.Equals(1)) { Console.WriteLine("You Won $" + jackpot * 0.16 + "!"); }
-                if(matchNum.Equals(2)) { Console.WriteLine("You Won $" + jackpot * 0.25 + "!"); }
-                if(matchNum.Equals(3)) { Console.WriteLine("You Won $" + jackpot * 0.38 + "!"); }
-                if(matchNum.Equals(4)) { Console.WriteLine("You Won $" + jackpot * 0.60 + "!"); }
-                if(matchNum.Equals(5)) { Console.WriteLine("You Won $" + jackpot * 0.80 + "!"); }
-                if(matchNum.Equals(6)) { Console.WriteLine("You must have cheated, you Won $" + jackpot + "!"); }
+                if(matchNum.Equals(0)) { Console.WriteLine("Sorry, better Luck next time. Lets play again."); }
+                if(matchNum.Equals(1)) { Console.WriteLine("You Won $" + jackpot * 0.06 + "! Lets play again."); }
+                if(matchNum.Equals(2)) { Console.WriteLine("You Won $" + jackpot * 0.10 + "! Lets play again."); }
+                if(matchNum.Equals(3)) { Console.WriteLine("You Won $" + jackpot * 0.38 + "! Lets play again."); }
+                if(matchNum.Equals(4)) { Console.WriteLine("You Won $" + jackpot * 0.60 + "! Lets play again."); }
+                if(matchNum.Equals(5)) { Console.WriteLine("You Won $" + jackpot * 0.80 + "! lets play again."); }
+                if(matchNum.Equals(6)) { Console.WriteLine("You must have cheated, you Won $" + jackpot + "! Lets play again."); }
             }
 
             Console.WriteLine("Thanks for playing!");
