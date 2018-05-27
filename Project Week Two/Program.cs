@@ -20,13 +20,14 @@ namespace Project_Week_Two
             exitRes = Console.ReadLine().ToLower();
             while(exitRes.Equals("yes"))
             {
-                
+            Console.WriteLine();    
             Console.WriteLine("What is your minimum range number?");
             int minRange = int.Parse(Console.ReadLine());
 
             Console.WriteLine();
             Console.WriteLine("What is your maximum range number?");
             int maxRange = int.Parse(Console.ReadLine());
+                Console.WriteLine();
 
             Console.WriteLine("Please Pick Your 6 Winning Numbers");
             Console.WriteLine();
@@ -68,13 +69,18 @@ namespace Project_Week_Two
                     }
                 }
 
-                jackpot = jackpot / matchNum;
+              
                 Console.WriteLine();
-                Console.WriteLine("You matched " + matchNum + " Lucky Numbers Correctly");
+                Console.WriteLine("You matched " + matchNum + " Lucky Numbers");
                 Console.WriteLine();
-                if (matchNum.Equals(0)) { Console.WriteLine("Sorry, better Luck next time"); }
-                else { Console.WriteLine("You Won $" + jackpot + "!"); }
-               
+
+                if(matchNum.Equals(0)) { Console.WriteLine("Sorry, better Luck next time"); }
+                if(matchNum.Equals(1)) { Console.WriteLine("You Won $" + jackpot * 0.16 + "!"); }
+                if(matchNum.Equals(2)) { Console.WriteLine("You Won $" + jackpot * 0.25 + "!"); }
+                if(matchNum.Equals(3)) { Console.WriteLine("You Won $" + jackpot * 0.38 + "!"); }
+                if(matchNum.Equals(4)) { Console.WriteLine("You Won $" + jackpot * 0.60 + "!"); }
+                if(matchNum.Equals(5)) { Console.WriteLine("You Won $" + jackpot * 0.80 + "!"); }
+                if(matchNum.Equals(6)) { Console.WriteLine("You must have cheated, you Won $" + jackpot + "!"); }
             }
 
             Console.WriteLine("Thanks for playing!");
